@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function validation()
+		{
+		var name=document.form1.name.value;
+		var password=document.form1.password.value;
+		var password1=document.form1.password1.value;
+		if(name==null || name=="")
+		{
+			alert("name should not be empty");
+			return false;
+		}
+		else if(password.length<6)
+		{
+			alert("password should not be less than six characters");
+			return false;
+		}
+		else if(password==password1)
+		{
+		
+			return true;
+		}
+		else
+		{
+			alert("both password should be same");
+				return false;
+		}
+		}
+		
+	</script>
+</head>
+<body>
+<form name="form1" method="post" action="test.php" onsubmit=" return validation()">
+	Name:<input type="text" name="name"><br>
+	Password:<input type="Password" name="password">
+	Confirm Password:<input type="password" name="password1">
+	<input type="submit" value="submit">
+</form>
+</body>
+</html>
